@@ -1,0 +1,11 @@
+services:
+  jenkins:
+    image: jenkins/jenkins:jdk17
+    container_name: jenkins
+    restart: on-failure
+    port:
+      - 8080:8080
+      - 50000:50000
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8
