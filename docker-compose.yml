@@ -2,6 +2,8 @@ services:
   jenkins:
     image: jenkins/jenkins:jdk17
     container_name: jenkins
+    privileged: true
+    user: root
     restart: on-failure
     ports:
       - 8080:8080
